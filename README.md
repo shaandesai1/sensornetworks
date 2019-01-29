@@ -12,8 +12,8 @@ We found the signal to vary significantly with minor variations in the surroundi
 The challenge with obtaining a perfect representation of these signals is the fact that there is human interaction, particularly in the case of phone orientation when a person has to hold the device and can block/interfere the signal.
 
 
-![RSSI vs distance graph](./RSSI-vs-distance.pdf)
-<img src="./controllers_brief.svg">
+![RSSI vs distance graph](./RSSI-vs-distance.svg)
+<img src="./RSSI-vs-distance.svg">
 
 
 ### Path Loss

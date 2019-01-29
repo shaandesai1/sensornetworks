@@ -13,7 +13,6 @@ The challenge with obtaining a perfect representation of these signals is the fa
 
 
 ![RSSI vs distance graph](./RSSI-vs-distance.svg)
-<img src="./RSSI-vs-distance.svg">
 
 
 ### Path Loss

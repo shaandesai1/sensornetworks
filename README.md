@@ -12,6 +12,8 @@ We found the signal to vary significantly with minor variations in the surroundi
 The challenge with obtaining a perfect representation of these signals is the fact that there is human interaction, particularly in the case of phone orientation when a person has to hold the device and can block/interfere the signal.
 
 
+!(RSSI-vs-distance.pdf)
+
 ### Path Loss
 
 Below you can see a figure of signal strength as a function of distance. The experiment was then repeated three times and the data is visible in the graph. Each distance was not repeatedly measured to avoid autocorrelation.

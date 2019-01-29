@@ -22,7 +22,5 @@ Theoretically, the signal should decrease proportionally to the distance squared
 
 ### Horus on synthetic data
 
-![](./histogramAP1.svg)
-![](./histogramAP2.svg)
-![](./histogramAP3.svg)
+![](./histogramAP1.svg) ![](./histogramAP2.svg) ![](./histogramAP3.svg)
 

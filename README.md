@@ -24,5 +24,4 @@ Theoretically, the signal should decrease proportionally to the distance squared
 
 <img src="./histogramAP1.svg" alt="./histogramAP1.svg" width="240"/><img src="./histogramAP2.svg" alt="./histogramAP2.svg" width="240"/><img src="./histogramAP3.svg" alt="./histogramAP3.svg" width="240"/>
 
-![](./histogramAP1.svg) ![](./histogramAP2.svg) ![](./histogramAP3.svg)
-
+The signal variation is modelled as a Gaussian distribution. Gassian distributions is good choice as several of the sources for the signal variation (thermal noise on the transmitter and receiver, air composition and density on the path, etc) can be modelled as Gaussian noise. Hence, the overall variation is Gaussian as well.

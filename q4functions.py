@@ -223,7 +223,7 @@ def plot_histogram(train_db, location, n_ap, n_samples):
 
 
 # The Horus probabilistic localization system
-def predict(wifi_db, test_db,n_ap, samples_array):
+def predict(wifi_db, test_db,n_ap):
     
     
     

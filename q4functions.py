@@ -233,7 +233,7 @@ def predict(wifi_db, test_db,n_ap):
     predicted_loc = np.zeros((len(test_db), 2))
     actual_loc = test_db[:, 0:2]
 
-    small_val = 7
+    small_val = -8
     # - - - - WRITE YOUR CODE HERE - - - - -
 
     
@@ -254,16 +254,10 @@ def predict(wifi_db, test_db,n_ap):
 
             loss[j] = np.nansum(lossall)/sum(~np.isnan(lossall))
         
-        #print(np.argmax(loss))
-        loss = np.exp(loss-max(loss))
+        loss = np.exp(loss)
         loss = loss/loss.sum()
-        
-        
-        #new_x = (wifi_db[:,1]*loss).sum()
-        #new_y = (wifi_db[:,2]*loss).sum()
-        thresh = sorted(loss)[-small_val]
+        thresh = sorted(loss)[small_val]
         loss[loss<thresh] = 0
-        
         loss = loss/loss.sum()
         new_x = (wifi_db[:,0]*loss).sum()
         new_y = (wifi_db[:,1]*loss).sum()

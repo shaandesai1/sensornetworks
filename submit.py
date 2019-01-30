@@ -9,7 +9,7 @@ import requests
 import statistics
 
 errors = list()
-solution = open('./real_data/test/location.txt','r')
+solution = open('test_locations.txt','r')
 
 i = 1
 for line in solution:

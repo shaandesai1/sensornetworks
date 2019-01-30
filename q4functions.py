@@ -225,7 +225,10 @@ def plot_histogram(train_db, location, n_ap, n_samples):
 # The Horus probabilistic localization system
 def predict(wifi_db, test_db,n_ap):
     
-    
+    for i in range(wifi_db.shape[0]):
+        for j in range(2,wifi_db.shape[1]):
+            if type(wifi_db[i,j]) == float:
+                wifi_db[i,j] = [np.nan,np.nan]
     
     predicted_loc = np.zeros((len(test_db), 2))
     actual_loc = test_db[:, 0:2]
@@ -235,8 +238,10 @@ def predict(wifi_db, test_db,n_ap):
 
     
     AP=np.zeros((n_ap,wifi_db.shape[0],2))
-    for i in range(n_ap):
-        AP[i,:,:]= np.array([wifi_db[:,2+i][0],wifi_db[:,2+i][1]])
+
+    for i in range(n_ap): # loops over access points
+        for k in range(AP.shape[1]): # loops over training points
+            AP[i,k,:]= np.array([wifi_db[k,2+i][0],wifi_db[k,2+i][1]])
     
     for i in range(test_db.shape[0]):
         
@@ -244,13 +249,13 @@ def predict(wifi_db, test_db,n_ap):
         
         for j in range(AP.shape[1]):
             
-#            lossall = [log_loss(test_db[i,samples_array[:k].sum()+3:samples_array[:k+1].sum()+3].mean(),AP[k,j,0],AP[k,j,1]) for k in range(n_ap)]
+#           lossall = [log_loss(test_db[i,samples_array[:k].sum()+3:samples_array[:k+1].sum()+3].mean(),AP[k,j,0],AP[k,j,1]) for k in range(n_ap)]
             lossall = [log_loss(test_db[i,k+2],AP[k,j,0],AP[k,j,1]) for k in range(n_ap)]
-            loss[j] = sum(lossall)/sum(~np.isnan(lossall))         
+
+            loss[j] = np.nansum(lossall)/sum(~np.isnan(lossall))
         
         #print(np.argmax(loss))
-        loss = np.exp(loss)
-        
+        loss = np.exp(loss-max(loss))
         loss = loss/loss.sum()
         
         
@@ -276,7 +281,7 @@ def predict(wifi_db, test_db,n_ap):
     
     # - - - - - - - - - - - - - - - - - - - -
 
-    sys.stdout.write("done\n")
+    sys.stdout.write("done now\n")
     return actual_loc, predicted_loc
 
 
@@ -351,5 +356,4 @@ def plot_error(actual_loc, predicted_loc):
 
 
 def log_loss(val,mu,sigma):
-    log_loss = (-(val-mu)**2)/(sigma**2)
     return np.log(norm.pdf(val,mu,sigma))

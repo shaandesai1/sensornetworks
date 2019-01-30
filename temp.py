@@ -73,18 +73,17 @@ def make_predictions(train_data, test_data):
         test_features = pd.DataFrame(test_data.iloc[i]).transpose()
         test_mac_addresses = set(test_features.columns[2:])
         train_mac_addresses = set(train_data.columns[2:])
-
         mutual_mac_addresses = list(test_mac_addresses.intersection(train_mac_addresses))
         cropped_test_df = test_features[['x', 'y'] + mutual_mac_addresses]
 
         cropped_test_df = pd.DataFrame(cropped_test_df.apply(lambda x: np.mean(x[0]))).transpose()
         cropped_train_df = train_data[['x', 'y'] + mutual_mac_addresses]
 
-        _, location = q4funcs.predict(cropped_train_df.values, cropped_test_df.values, len(cropped_test_df.columns))
-        location = 1
+        _, location = q4funcs.predict(cropped_train_df.values, cropped_test_df.values, len(cropped_test_df.columns[2:]))
+        print(location)
         locations.append(location)
 
-        break
+    print(locations)
     return cropped_test_df, cropped_train_df
 
 
@@ -102,5 +101,4 @@ train_data = get_training_data(training_path)
 a, b = make_predictions(train_data, test_data)
 
 
-print(b.values.shape )
 # b = b.values

@@ -72,6 +72,12 @@ Adding AP's does appear to improve predictions with better test point mapping in
 
 ### Fingerprint on Real Data
 
+In this section we simply use our top K approach of Horus to model the real dataset. We find that we can achieve a low error term by picking enough probabilities from the positions. 
+
+![](./q4.svg)
+
+
+![](./shot.png)
 
 
 

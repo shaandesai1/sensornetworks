@@ -37,9 +37,9 @@ Top 1 Probability Results
 
 Top 5 Probability Results
 
-<img src="./images/path1_top5.svg" alt="./images/path1_top5.svg" width="360"/><img src="./images/error1_top5.svg" alt="./images/error1_top5.svg" width="360"/>
+<img src="./images/path1_5top.svg" alt="./images/path1_5top.svg" width="360"/><img src="./images/error1_5top.svg" alt="./images/error1_5top.svg" width="360"/>
 
 Top 10 Probability Results
 
-<img src="./images/path1_top10.svg" alt="./images/path1_top10.svg" width="360"/><img src="./images/error1_top10.svg" alt="./images/error1_top10.svg" width="360"/>
+<img src="./images/path1_10top.svg" alt="./images/path1_10top.svg" width="360"/><img src="./images/error1_10top.svg" alt="./images/error1_10top.svg" width="360"/>
 

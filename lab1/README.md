@@ -76,7 +76,7 @@ In this section we simply use our top K approach of Horus to model the real data
 
 ![](./q4.svg)
 
-![](./training.svg)
+![](./training.png)
 
 
 ![](./shot.png)

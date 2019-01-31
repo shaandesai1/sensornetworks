@@ -24,4 +24,12 @@ Theoretically, the signal should decrease proportionally to the distance squared
 
 <img src="./histogramAP1.svg" alt="./histogramAP1.svg" width="240"/><img src="./histogramAP2.svg" alt="./histogramAP2.svg" width="240"/><img src="./histogramAP3.svg" alt="./histogramAP3.svg" width="240"/>
 
-The signal variation is modelled as a Gaussian distribution. Gassian distributions is good choice as several of the sources for the signal variation (thermal noise on the transmitter and receiver, air composition and density on the path, etc) can be modelled as Gaussian noise. Hence, the overall variation is Gaussian as well.
+The signal variation is modelled as a Gaussian distribution. Gassian distributions is good choice as several of the sources for the signal variation (thermal noise on the transmitter and receiver, air composition and density on the path, etc) can be modelled as Gaussian noise. Hence, the overall variation is Gaussian as well. Each source at each location results in a gaussian with a mean and standard deviation. Using this information, we can compute the log likelihood of a test point against this gaussian and some the losses across access points at a given location. For example, if we have 63 fixed training locations, we will have 63 losses. We can feed these losses through a softmax to obtain probabilities. We can then use all these probabilities or the top K to weight the positions and obtain an average.
+
+
+
+#### Set 1 : 3 AP's
+
+Top 1 Probability Results
+
+<img src="./images/path1_top1.svg" alt="./images/path1_top1.svg" width="240"/><img src="./images/error1_top2.svg" alt="./images/error1_top1.svg" width="240"/>

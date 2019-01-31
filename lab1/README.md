@@ -76,8 +76,14 @@ In this section we simply use our top K approach of Horus to model the real data
 
 ![](./q4.svg)
 
+![](./training.svg)
+
 
 ![](./shot.png)
 
+
+Above we have plotted our predictions for the locations where we expect our test points to be. Around each point we also have a radius which includes the errors from the true value.
+
+The results show that the test points have an average error of 1.87 m and the training points have 1.61 m error. 
 
 

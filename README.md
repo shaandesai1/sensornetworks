@@ -32,4 +32,14 @@ The signal variation is modelled as a Gaussian distribution. Gassian distributio
 
 Top 1 Probability Results
 
-<img src="./images/path1_top1.svg" alt="./images/path1_top1.svg" width="240"/><img src="./images/error1_top2.svg" alt="./images/error1_top1.svg" width="240"/>
+<img src="./images/path1_top1.svg" alt="./images/path1_top1.svg" width="360"/><img src="./images/error1_top1.svg" alt="./images/error1_top1.svg" width="360"/>
+
+
+Top 5 Probability Results
+
+<img src="./images/path1_top5.svg" alt="./images/path1_top5.svg" width="360"/><img src="./images/error1_top5.svg" alt="./images/error1_top5.svg" width="360"/>
+
+Top 10 Probability Results
+
+<img src="./images/path1_top10.svg" alt="./images/path1_top10.svg" width="360"/><img src="./images/error1_top10.svg" alt="./images/error1_top10.svg" width="360"/>
+

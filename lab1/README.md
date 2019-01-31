@@ -1,4 +1,4 @@
-# sensornetworks
+# Sensor Networks Lab
 
 
 ### Signal Variability
@@ -18,7 +18,7 @@ Below you can see a figure of signal strength as a function of distance. The exp
 
 ![](./RSSI-vs-distance.svg)
 
-Theoretically, the signal should decrease proportionally to the distance squared, however, there are reflections from walls, floor, ceiling, people and objects in the room. This caused variations in the signal, some of them are consistent between different series which implies it was caused by the geometry of the room. The differences between different runs are most likely caused by the moving people, different phone placement and vvariation in the transmitted signal.
+Theoretically, the signal should decrease proportionally to the distance squared, however, there are reflections from walls, floor, ceiling, people and objects in the room. In reality the signal days slightly slower than the theoritical model. This caused variations in the signal, some of them are consistent between different series which implies it was caused by the geometry of the room. The differences between different runs are most likely caused by the moving people, different phone placement and vvariation in the transmitted signal.
 
 ### Horus on synthetic data
 

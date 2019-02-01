@@ -2,7 +2,7 @@
 
 ### Data Collection
 
-![](./RSSI-vs-distance.svg)
+![](./KaurCuup.svg)
 
 
 

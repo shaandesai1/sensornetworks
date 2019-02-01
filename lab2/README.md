@@ -4,6 +4,9 @@
 
 ![](./KaurCuup.svg)
 
+![](./pos.svg)
+
+![](./distdiff)
 
 
 ### Turtlebot

@@ -14,8 +14,8 @@ max_iterations = 30000
 # Set this path to your project directory
 path = './'
 # Set this path to your dataset directory
-dataset_file= '../scripts/2019-01-30-20-51-30/dataset_test.txt'
-resized_directory = '../scripts/2019-01-30-20-51-30/resizedimages/'
+dataset_file= 'dataset_test.txt'
+resized_directory = 'resizedimages/'
 dataset = 'dataset_test.txt'
 
 class datasource(object):

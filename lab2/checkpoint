@@ -1,0 +1,2 @@
+model_checkpoint_path: "PoseNet_2019-01-30_60000.ckpt"
+all_model_checkpoint_paths: "PoseNet_2019-01-30_60000.ckpt"

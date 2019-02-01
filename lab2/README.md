@@ -8,3 +8,5 @@ It is important to synchronise the turtlebot time with the time of the cameras. 
 
 
 <img src="./expxyz.svg" alt="./expxyz.svg" height = "360" width="360"/><img src="./expangle.svg" alt="./expangle.svg" height = "360" width="360"/>
+
+<img src="./origxyz.svg" alt="./origxyz.svg" height = "360" width="360"/><img src="./origangle.svg" alt="./origangle.svg" height = "360" width="360"/>

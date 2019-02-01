@@ -6,7 +6,7 @@
 
 ![](./pos.svg)
 
-![](./distdiff)
+![](./distdiff.png)
 
 
 ### Turtlebot

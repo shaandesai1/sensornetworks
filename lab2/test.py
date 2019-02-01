@@ -150,6 +150,8 @@ def main():
             predicted_q = np.squeeze(predicted_q)
             predicted_x = np.squeeze(predicted_x)
 
+            
+
             #Compute Individual Sample Error
             q1 = pose_q / np.linalg.norm(pose_q)
             q2 = predicted_q / np.linalg.norm(predicted_q)
@@ -157,8 +159,7 @@ def main():
             theta = 2 * np.arccos(d) * 180/math.pi
             error_x = np.linalg.norm(pose_x-predicted_x)
             results[i,:] = [error_x,theta]
-            print 'Iteration:  ', i, '  Error XYZ (m):  ', error_x, '  Error Q (degrees):  ', theta
-            print tf.__version__
+            print 'Iteration:  ', i, '  Error XYZ (m):  ', error_x, '  Error Q (degrees):  ', theta,'  predicted_x: ',predicted_x,'   predicted_q: ',predicted_q
 
     median_result = np.median(results,axis=0)
     mean_result = np.mean(results,axis=0)

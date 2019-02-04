@@ -50,5 +50,5 @@ Images that gave the smallest error in position prediction
 
 | ![space-1.jpg](./worstimages/2019-01-31-14-38-57-806163.png) | ![](./worstimages/2019-01-31-14-39-46-309718.png) | ![](./worstimages/2019-01-31-14-39-47-973832.png) |
 |:--:|:--:|:--:| 
-| *6376* |*9635*|*9883*|
+| *2263* |*806*|*2313*|
 

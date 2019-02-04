@@ -42,6 +42,8 @@ It is important to synchronise the turtlebot time with the time of the cameras. 
 
 ![](./viconerr.svg)
 
+The images for which the error is smallest, were captured during the moments when the objects were in close proximity to the camera. This allows to determine the position more accurately. The accuracy is the worst for the initial position. This is most likely caused by a small number of features which were potentially moved between collecting the training data and test data.
+
 Images that gave the smallest error in position prediction
 
 | ![space-1.jpg](./bestimages/2019-01-31-14-42-03-236518.png) | ![](./bestimages/2019-01-31-14-43-51-731422.png) | ![](./bestimages/2019-01-31-14-43-59-991355.png) |
@@ -52,3 +54,7 @@ Images that gave the smallest error in position prediction
 |:--:|:--:|:--:| 
 | *2263* |*806*|*2313*|
 
+
+
+### Wheel odometry
+![](./wheelodom2d.svg)

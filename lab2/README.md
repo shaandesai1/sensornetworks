@@ -42,9 +42,10 @@ The results of the original test dataset:
 
 ### Visual odometry accuracy discussion
 
-The images which give the largest and smallest error in prediction are shown below. We can see that the images with the largest error all have the other robot in frame which may have moved since when the network was trained. We can also see that the majority of the background of the image is blank walls. This is difficult to extract features from which allow unique identification of position. By contrast, the images with the smallest error had several distinct, permenant objects taking up the majority of the frame. The paper mentions that the network is highly sensitive to large textureless areas such as floor
+The images which give the largest and smallest error in prediction are shown below. We can see that the images with the largest error all have the other robot in frame which may have moved since when the network was trained. We can also see that the majority of the background of the image is blank walls. This is difficult to extract features from which allow unique identification of position. By contrast, the images with the smallest error had several distinct, permenant objects taking up the majority of the frame. The paper mentions that the network is highly sensitive to large textureless areas such as floor or blank walls.
 
-The images for which the error is smallest, were captured during the moments when the objects were in close proximity to the camera. This allows to determine the position more accurately. The accuracy is the worst for the initial position. This is most likely caused by a small number of features which were potentially moved between collecting the training data and test data. 
+Large errors in rotation are caused by symmetric environments and also by the camera being in a slightly different position to when the network is trained. It is also important to ensure that the VICON marker has the same location and rotation relevant to robot's camera in training and testing.
+
 
 Images that gave the smallest error in position prediction
 
@@ -64,3 +65,5 @@ To improve the performance of visual odometry, we could add additional cameras t
 
 ### Wheel odometry
 ![](./wheelodom2d.svg)
+
+The above figure shows location estimation of the VICON system compared with that inferred from the robot's accelerometer (wheel odometry). As expected the two trajectories have very similar shapes although we notice some drift from the VICON data in the wheel odometry. This is because we are not measuring position directly and instead have to integrate over measured accelerations. As such small errors in these measurements will accumulate as time increases. This could be caused due to the wheels slipping, irregular terrain or calibration errors in the accelerometer.

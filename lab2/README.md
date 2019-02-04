@@ -21,6 +21,8 @@ It is important to synchronise the turtlebot time with the time of the cameras. 
 
 
 <img src="./expxyz.svg" alt="./expxyz.svg" height = "360" width="360"/><img src="./expangle.svg" alt="./expangle.svg" height = "360" width="360"/>
+
+
 |Error| Mean | Median | Min | Max | 
 |------|------  |------  |------  |------  |
 |   Translation |  1.423 | 0.974 | 0.02 | 3.97 |

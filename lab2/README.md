@@ -38,3 +38,14 @@ It is important to synchronise the turtlebot time with the time of the cameras. 
 
 
 
+![](./viconerr.svg)
+
+![](./bestimages/2019-01-31-14-42-03-236518.png)
+![](./bestimages/2019-01-31-14-43-51-731422.png)
+![](./bestimages/2019-01-31-14-43-59-991355.png)
+
+
+
+![](./worstimages/2019-01-31-14-38-57-806163.png)
+![](./worstimages/2019-01-31-14-39-46-309718.png)
+![](./worstimages/2019-01-31-14-39-47-973832.png)

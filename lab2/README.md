@@ -17,8 +17,7 @@ As expected the VICON system appears to be very accurate, with a mean error of l
 It is important to synchronise the turtlebot time with the time of the cameras. This allows us to later compare the predicted motion data with the real data. A visual or sound signal could be used to synchronise the streams, similar to clapperboards that are used in movies. Also, when the devices are connected to the internet, NTP could be used to synchronise both streams with respect to UTC.
 
 
-
-
+The results of our experiment for visual odometry:
 
 <img src="./expxyz.svg" alt="./expxyz.svg" height = "360" width="360"/><img src="./expangle.svg" alt="./expangle.svg" height = "360" width="360"/>
 
@@ -30,6 +29,7 @@ It is important to synchronise the turtlebot time with the time of the cameras. 
 
 
 
+The results of the original test dataset:
 <img src="./origxyz.svg" alt="./origxyz.svg" height = "360" width="360"/><img src="./origangle.svg" alt="./origangle.svg" height = "360" width="360"/>
 
 |Error| Mean | Median | Min | Max | 
@@ -37,12 +37,13 @@ It is important to synchronise the turtlebot time with the time of the cameras. 
 |   Translation |  0.706 | 0.595 | 0.01 | 4.40 |
 |   Rotation |  8.59 | 5.08 | 0.2 | 171|
 
-
-
-
 ![](./viconerr.svg)
 
-The images for which the error is smallest, were captured during the moments when the objects were in close proximity to the camera. This allows to determine the position more accurately. The accuracy is the worst for the initial position. This is most likely caused by a small number of features which were potentially moved between collecting the training data and test data.
+
+### Visual odometry accuracy discussion
+
+The images which give the largest and smallest error in prediction are shown below. We can see that the images with the largest error all have the other robot in frame which may have moved since when the network was trained. We can also see that the majority of the background of the image is blank walls. This is difficult to extract features from which allow unique identification of position. 
+The images for which the error is smallest, were captured during the moments when the objects were in close proximity to the camera. This allows to determine the position more accurately. The accuracy is the worst for the initial position. This is most likely caused by a small number of features which were potentially moved between collecting the training data and test data. 
 
 Images that gave the smallest error in position prediction
 
@@ -50,9 +51,13 @@ Images that gave the smallest error in position prediction
 |:--:|:--:|:--:| 
 | *6376* |*9635*|*9883*|
 
+Images that gave the largest error in position prediction:
+
 | ![space-1.jpg](./worstimages/2019-01-31-14-38-57-806163.png) | ![](./worstimages/2019-01-31-14-39-46-309718.png) | ![](./worstimages/2019-01-31-14-39-47-973832.png) |
 |:--:|:--:|:--:| 
 | *2263* |*806*|*2313*|
+
+To improve the performance of visual odometry, we could add additional cameras to the robot to predict the position of both of them. Alternatively, we could add wheel odometry or gyroscopic data to the model as well. Another improvement would also consider that the successive  images are correlated as the robot is moving at finite speed. This property could be leveraged by using a Kalman filter on the outputs of the network or alternatively by using an architecture such as a recurrent neural network. 
 
 
 

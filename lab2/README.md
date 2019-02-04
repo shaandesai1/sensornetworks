@@ -43,6 +43,7 @@ It is important to synchronise the turtlebot time with the time of the cameras. 
 ![](./viconerr.svg)
 
 Images that gave the smallest error in position prediction
+
 ![6376](./bestimages/2019-01-31-14-42-03-236518.png)
 ![9635](./bestimages/2019-01-31-14-43-51-731422.png)
 ![9883](./bestimages/2019-01-31-14-43-59-991355.png)

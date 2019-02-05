@@ -40,7 +40,7 @@ The results of the original test dataset:
 
 ![](./viconerr.svg)
 
-The histogram of the postion errors has two distinctive peaks. The second peak is caused by the images which were recorded at the robot's intial position. The rest of the distribution follows Maxwell-Boltzmann distribution, which shows the expected vector length, given its components are random independent Gaussian variables. 
+The histogram of the postion errors has two distinctive peaks. The second peak is caused by the images which were recorded at the robot's intial position. The rest of the distribution follows Maxwell-Boltzmann distribution, which shows the expected vector length, given its three components are random independent Gaussian variables. 
 
 ### Visual odometry accuracy discussion
 
